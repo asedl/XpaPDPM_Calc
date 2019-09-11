@@ -7,8 +7,7 @@ Project includes:
 + Some Testdata
 
 **This first version is based on a BETA version of the PDPM Grouper DLL: 
-V1.00 (BETA) released October 1, 2019. Another version of this project will replace/update that with the latest version of that sources. 
-More information about that DLL and versions: [MDS 3.0 Technical Information](https://www.cms.gov/Medicare/Quality-Initiatives-Patient-Assessment-Instruments/NursingHomeQualityInits/NHQIMDS30TechnicalInformation.html) ** 
+V1.00 (BETA) released a few month ago. Another version of this project will replace/update that with the latest version of that sources, for which a final version has been released just a few days ago. More information about that DLL and versions: [MDS 3.0 Technical Information](https://www.cms.gov/Medicare/Quality-Initiatives-Patient-Assessment-Instruments/NursingHomeQualityInits/NHQIMDS30TechnicalInformation.html) ** 
 
 Documentation and stuff follows, for now simply copy the DLL from /bin directory of this repository to your Magic directory, open the Magic Xpa Test project and have a look into the test program(s) there.
 
