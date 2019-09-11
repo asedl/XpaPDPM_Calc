@@ -1,0 +1,161 @@
+-----------------
+Bridge DLL Notes:
+
+	Be aware that the Bridge DLL will not be updated by CMS
+
+	The HH-PPS comes with 2 .jars now: HomeHealthJava.jar and HH_PPS_V_API.jar. 
+The Bridge DLL was originally designed to look for and load only one .jar, 
+the HomeHealthJava.jar.  So, to use the Bridge DLL with this version, there are two options:
+
+	1) unpack the 2 jars and combine them back into a single jar named 
+HomeHealthJava.jar
+
+	2) since you should also have the source for the Bridge DLL you can change 
+the source to look for both jars.
+
+
+---------------
+IKVM.net Notes:
+
+	IKVM.net is a program that will convert any Java library into a .NET DLL.
+This kind of DLL can be used with C#, VB.Net, etc. and does not require an separate
+installation of Java on client's machine.
+	
+	IKVM.net is not a CMS product.
+
+	Below is an example C# program for interfacing with a IKVM.net converted
+HH-PPS.
+
+
+---------- Example C# interfacing with IKVN.net - Start ----------
+-- This code is provide for example purposes only, and is not   --
+-- supported as part of the HH-PPS official software. The       --
+-- developer if free to alter it as needed.                     --
+------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+/**
+ * C# Example program for connecting with the HH-PPS using an IKVM create DLL
+ * 
+ * In this example, we provide two basic examples: traditional grouping and enhanced grouping.
+ * The traditional grouping returns the basic results of HIPPS Code, Treatment Authorization
+ * code, Version identifier and the edit flags. The problem with the traditional grouping is
+ * that the results need to be parsed in order to split them into those 4 elements.
+ * 
+ * With the introduction of OASIS-C1 and its list of edits, the enhanced grouping is able to
+ * not only provide the same 4 elements as the traditional, however, in a structured object instead
+ * of a string, but it is also able to provide the edits information and the scoring details.  The
+ * enhanced grouping also enhances the edits but providing checks for Manifestation codes in PDX (a typical
+ * Medical Code Editor edit), actual code validation based on a code set and not just a code pattern, 
+ * and Manifestation/Etiology pairing edits.
+ * 
+ * The traditional grouping is accessed through the class:
+ *     com.mmm.cms.homehealth.cpp.DllToJavaConnector
+ * Using the "scoreOasisB()" method. Don't let the name fool you (its a left over name), but it will group
+ * OASIS-B/C/C1 records just fine.
+ * 
+ * The enhanced grouping is accessed through the class:
+ *     com.mmm.cms.homehealth.pps.HH_PPS
+ * Using the "scoreRecord()" method. This, too, will group OASIS-B/C/C1 records 
+ * 
+ * In either case, both classes rely on an installation of the Java version of HH-PPS, but only in order
+ * to find the configuration and data files that support the grouping.
+ * 
+ * Neither approach is really any faster at grouping than the other. 
+ * 
+ * All of this is possible by the wonderful work by IKVM.net.  This site provides a way to re-compile the 
+ * Java class files into a managed DLL that is easy to use by C#. In order to use this example, you will 
+ * need the IKVM.net library and use the following DLLs: HomeHealthJava.dll, IKVM.OpenJDK.Core.dll,
+ * IKVM.OpenJDK.Util.dll, IVKM.Runtime.dll, plus the traditional C# references.
+ * 
+ * author: 3M Health Information Systems for CMS Home Health
+ */
+namespace CSharp_IKVM_Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+             * This  section displays how to get the traditional data out of the
+             * HH-PPS - i.e. the HIPPS, treatment Auth, Version, flags - as a string that
+             * must be parsed
+             */
+            String grouperResults;
+            int idx = 1;
+            com.mmm.cms.homehealth.proto.HomeHealthRecord_IF hhRecord;
+
+            System.Console.WriteLine("\n\n*****\n*  Scoring Results basic info test\n*****\n");
+
+            grouperResults = com.mmm.cms.homehealth.cpp.DllToJavaConnector.scoreOasisB("B1                    C-072009    02.00                                                                                                                                         20090615                                                                                                                     2013010104                                                                                             296.80   401.9    300.00   715.89                    0001                                                                   00         00       NA              01      01  0100                                   01  01                                                                                                                                                             02                                                                                    0000           Rec 000000001: Code 3AGKS--OASIS 09GK13AA42DFFGBIFH--Version V3413 --Flag 1                                   01   0                                                00    00  0                0201  0103                                    NA                                                                                                                                                                                                                                                                                                                                       %");
+            System.Console.WriteLine("Record " + idx++ + " Grouped: " + 
+                "HIPPS: " + grouperResults.Substring(0,5) +
+                ", TreatmentAuth: " + grouperResults.Substring(5, 18) +
+                ", Version: " + grouperResults.Substring(23, 5) +
+                ", Flag: " + grouperResults.Substring(28,1)
+                );
+
+            grouperResults = com.mmm.cms.homehealth.cpp.DllToJavaConnector.scoreOasisB("B1                    C-072009    02.00                                                                                                                                         20100206                                                                                                                     2013010101                                                                                             427.32   414.8    250.00   414.00   V58.83   V58.61  0001                                                                   00         00       NA              03      00  0000                                   00  00                                                                                                                                                             01                                                                                    0000           Rec 000000008: Code 1BFKS--OASIS 10BK13AA11HAMABALA--Version V3413 --Flag 1                                   01   0                                                00    00  0                0100  0001                                    NA                                                                                                                                                                                                                                                                                                                                       %");
+            System.Console.WriteLine("Record " + idx++ + " Grouped: " +
+                "HIPPS: " + grouperResults.Substring(0, 5) +
+                ", TreatmentAuth: " + grouperResults.Substring(5, 18) +
+                ", Version: " + grouperResults.Substring(23, 5) +
+                ", Flag: " + grouperResults.Substring(28, 1)
+                );
+
+            // converting record to HomeHealthRecord
+            hhRecord = com.mmm.cms.homehealth.cpp.DllToJavaConnector.convertRecord("B1                    C-072009    02.00                                                                                                                                         20100206                                                                                                                     2013010101                                                                                             427.32   414.8    250.00   414.00   V58.83   V58.61  0001                                                                   00         00       NA              03      00  0000                                   00  00                                                                                                                                                             01                                                                                    0000           Rec 000000008: Code 1BFKS--OASIS 10BK13AA11HAMABALA--Version V3413 --Flag 1                                   01   0                                                00    00  0                0100  0001                                    NA                                                                                                                                                                                                                                                                                                                                       %");
+            System.Console.WriteLine("Converted Object: " + hhRecord.ToString());
+            System.Console.WriteLine("\n Scoring Results basic info  test 1\nPress enter key to continue...\n");
+            System.Console.ReadLine();
+
+
+            /*
+             * This  section displays how to get the new detailed data out of the
+             * HH-PPS - i.e. the traditional data, plus edits - as an object without 
+             * having to parse the results
+             */
+            System.Console.WriteLine("\n\n*****\n*  Scoring Results Detailed info test\n*****\n");
+            com.mmm.cms.homehealth.proto.ScoringResultsIF scoreResults;
+            com.mmm.cms.homehealth.pps.HH_PPS hhPps = com.mmm.cms.homehealth.pps.HH_PPS.getInstance();
+
+            /*
+             * init() must be called before using the HH-PPS, but only one time
+             * In this example, we call with the null properties file, and let the HH-PPS find
+             * the default which is expected to be in C:\Program Files\HomeHealthGrouper\config
+             * with the name HomeHealthGrouper.properties
+             * 
+             * This section uses the OASIS-C1 record, which is the first record format that uses
+             * the OASIS-C1 style edits.
+             */
+            hhPps.init((java.util.Properties) null);
+
+            /*
+             * OASIS-C1 example 
+             */
+            hhRecord = hhPps.convertRecord("OASIS   01    C1-102014 2.11                                                                                                                                                                                                                                                                                  20100419                                                                                                                            2015010101                 01  0389                                                                                                                                                                                                                                                                                 0001                        00        03   0                                                00NA00    0102002              00  0000                        01020401  0102                           NA                    0110                                                                                                                         Rec 000003895: Code 1AGPT--OASIS 10EF14AA11CFDGCIAH--Version V3414 --Flag 1                                                                                                                                                                                                      A00.0     H54.0     D47.3     C00.0     E08.311   R13.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    20100419                                                      %");
+            /*
+             * This call will use the default internal validation of the HH-PPS
+             */
+            scoreResults = hhPps.scoreRecord(hhRecord, true, null, null);
+
+            System.Console.WriteLine("ScoreResults\n" + 
+                "HIPPS: " + scoreResults.getHIPPSCode() + "\n" +
+                ", TreatmentAuth: " + scoreResults.getTreatmentAuthorization() + "\n" +
+                ", Version: " + scoreResults.getGrouperVersion() + "\n" +
+                ", Flag: " + scoreResults.getValidityFlag() + "\n" +
+                ", Validation Edits: " + scoreResults.getValidationEdits() +  "\n");
+            System.Console.WriteLine("\nScoring Results Detailed info test\nPress enter key to close...\n");
+            System.Console.ReadLine();
+        }
+    }
+}
+
+
+---------- Example C# interfacing with IKVN.net - End ----------

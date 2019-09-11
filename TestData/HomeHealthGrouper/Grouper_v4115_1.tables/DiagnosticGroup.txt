@@ -1,0 +1,22 @@
+1	Blindness and low vision
+2	Blood disorders
+3	Cancer and selected benign neoplasms
+4	Diabetes
+5	Dysphagia
+6	Gait Abnormality
+7	Gastrointestinal disorders
+8	Heart Disease
+9	Hypertension
+10	Neuro 1 - Brain disorders and paralysis
+11	Neuro 2 - Peripheral neurological disorders
+12	Neuro 3 - Stroke
+13	Neuro 4 - Multiple Sclerosis
+14	Ortho 1 - Leg Disorders
+15	Ortho 2 - Other Orthopedic disorders
+16	Psych 1 - Affective and other psychoses, depression
+17	Psych 2 - Degenerative and other organic psychiatric disorders
+18	Pulmonary disorders
+19	Skin 1 - Traumatic wounds, burns and post-operative complications
+20	Skin 2 - Ulcers and other skin conditions
+21	Tracheostomy care
+22	Urostomy/Cystostomy Care

@@ -1,0 +1,334 @@
+"Home Health Grouper Version v8219 Summary of Changes 
+Version Effective October 1, 2019"			
+			
+			
+ICD-10-CM Diagnoses Code Changes			
+The following new Diagnoses codes were added, effective 10/01/2019			
+DIAGNOSIS	DESCRIPTION	DIAGNOSTIC_GROUP	NRS_DIAGNOSTIC_GROUP
+D75A	Glucose-6-phosphate dehydrgnse (G6PD) defic without anemia	2	0
+D8130	Adenosine deaminase deficiency, unspecified	0	0
+D8131	Severe combined immunodef due to adenosine deaminase defic	0	0
+D8132	Adenosine deaminase 2 deficiency	0	0
+D8139	Other adenosine deaminase deficiency	0	0
+H814	Vertigo of central origin	10	0
+I2693	Single subsegmental pulmon emblsm w/o acute cor pulmonale	0	0
+I2694	Mult subsegmental pulmon emboli without acute cor pulmonale	0	0
+I4811	Longstanding persistent atrial fibrillation	0	0
+I4819	Other persistent atrial fibrillation	0	0
+I4820	Chronic atrial fibrillation, unspecified	0	0
+I4821	Permanent atrial fibrillation	0	0
+I80241	Phlebitis and thrombophlebitis of right peroneal vein	0	0
+I80242	Phlebitis and thrombophlebitis of left peroneal vein	0	0
+I80243	Phlebitis and thrombophlebitis of peroneal vein, bilateral	0	0
+I80249	Phlebitis and thrombophlebitis of unspecified peroneal vein	0	0
+I80251	Phlebitis and thrombophlebitis of right calf muscular vein	0	0
+I80252	Phlebitis and thrombophlebitis of left calf muscular vein	0	0
+I80253	Phlebitis and thombophlb of calf muscular vein, bilateral	0	0
+I80259	Phlebitis and thombophlb of unspecified calf muscular vein	0	0
+I82451	Acute embolism and thrombosis of right peroneal vein	0	0
+I82452	Acute embolism and thrombosis of left peroneal vein	0	0
+I82453	Acute embolism and thrombosis of peroneal vein, bilateral	0	0
+I82459	Acute embolism and thrombosis of unspecified peroneal vein	0	0
+I82461	Acute embolism and thrombosis of right calf muscular vein	0	0
+I82462	Acute embolism and thrombosis of left calf muscular vein	0	0
+I82463	Acute embolism and thombos of calf muscular vein, bilateral	0	0
+I82469	Acute embolism and thombos unsp calf muscular vein	0	0
+I82551	Chronic embolism and thrombosis of right peroneal vein	0	0
+I82552	Chronic embolism and thrombosis of left peroneal vein	0	0
+I82553	Chronic embolism and thrombosis of peroneal vein, bilateral	0	0
+I82559	Chronic embolism and thrombosis of unspecified peroneal vein	0	0
+I82561	Chronic embolism and thrombosis of right calf muscular vein	0	0
+I82562	Chronic embolism and thrombosis of left calf muscular vein	0	0
+I82563	Chronic embolism and thombos of calf muscular vein, bi	0	0
+I82569	Chronic embolism and thombos unsp calf muscular vein	0	0
+L89006	Pressure-induced deep tissue damage of unspecified elbow	0	0
+L89016	Pressure-induced deep tissue damage of right elbow	0	0
+L89026	Pressure-induced deep tissue damage of left elbow	0	0
+L89106	Pressr-induc deep tissue damage of unspecified part of back	0	0
+L89116	Pressure-induced deep tissue damage of right upper back	0	0
+L89126	Pressure-induced deep tissue damage of left upper back	0	0
+L89136	Pressure-induced deep tissue damage of right lower back	0	0
+L89146	Pressure-induced deep tissue damage of left lower back	0	0
+L89156	Pressure-induced deep tissue damage of sacral region	0	0
+L89206	Pressure-induced deep tissue damage of unspecified hip	0	0
+L89216	Pressure-induced deep tissue damage of right hip	0	0
+L89226	Pressure-induced deep tissue damage of left hip	20	0
+L89306	Pressure-induced deep tissue damage of unspecified buttock	0	0
+L89316	Pressure-induced deep tissue damage of right buttock	0	0
+L89326	Pressure-induced deep tissue damage of left buttock	0	0
+L8946	Pressr-induc dp tiss damag of contig site of back, butt & hp	0	0
+L89506	Pressure-induced deep tissue damage of unspecified ankle	0	0
+L89516	Pressure-induced deep tissue damage of right ankle	0	0
+L89526	Pressure-induced deep tissue damage of left ankle	0	0
+L89606	Pressure-induced deep tissue damage of unspecified heel	0	0
+L89616	Pressure-induced deep tissue damage of right heel	0	0
+L89626	Pressure-induced deep tissue damage of left heel	0	0
+L89816	Pressure-induced deep tissue damage of head	0	0
+L89896	Pressure-induced deep tissue damage of other site	0	0
+L8996	Pressure-induced deep tissue damage of unspecified site	0	0
+N6315	Unspecified lump in the right breast, overlapping quadrants	0	0
+N6325	Unspecified lump in the left breast, overlapping quadrants	0	0
+N9985	Post endometrial ablation syndrome	0	0
+Q6600	Congenital talipes equinovarus, unspecified foot	0	0
+Q6601	Congenital talipes equinovarus, right foot	0	0
+Q6602	Congenital talipes equinovarus, left foot	0	0
+Q6610	Congenital talipes calcaneovarus, unspecified foot	0	0
+Q6611	Congenital talipes calcaneovarus, right foot	0	0
+Q6612	Congenital talipes calcaneovarus, left foot	0	0
+Q66211	Congenital metatarsus primus varus, right foot	0	0
+Q66212	Congenital metatarsus primus varus, left foot	0	0
+Q66219	Congenital metatarsus primus varus, unspecified foot	0	0
+Q66221	Congenital metatarsus adductus, right foot	0	0
+Q66222	Congenital metatarsus adductus, left foot	0	0
+Q66229	Congenital metatarsus adductus, unspecified foot	0	0
+Q6630	Other congenital varus deformities of feet, unspecified foot	0	0
+Q6631	Other congenital varus deformities of feet, right foot	0	0
+Q6632	Other congenital varus deformities of feet, left foot	0	0
+Q6640	Congenital talipes calcaneovalgus, unspecified foot	0	0
+Q6641	Congenital talipes calcaneovalgus, right foot	0	0
+Q6642	Congenital talipes calcaneovalgus, left foot	0	0
+Q6670	Congenital pes cavus, unspecified foot	0	0
+Q6671	Congenital pes cavus, right foot	0	0
+Q6672	Congenital pes cavus, left foot	0	0
+Q6690	Congenital deformity of feet, unspecified, unspecified foot	0	0
+Q6691	Congenital deformity of feet, unspecified, right foot	0	0
+Q6692	Congenital deformity of feet, unspecified, left foot	0	0
+Q7960	Ehlers-Danlos syndrome, unspecified	0	0
+Q7961	Classical Ehlers-Danlos syndrome	0	0
+Q7962	Hypermobile Ehlers-Danlos syndrome	0	0
+Q7963	Vascular Ehlers-Danlos syndrome	0	0
+Q7969	Other Ehlers-Danlos syndromes	0	0
+Q8711	Prader-Willi syndrome	0	0
+Q8719	Other congen malform synd predom assoc with short stature	0	0
+R1115	Cyclical vomiting syndrome unrelated to migraine	0	0
+R8281	Pyuria	0	0
+R8289	Other abn findings on cytolog and histolog exam of urine	0	0
+S02121A	Fracture of orbital roof, right side, init	0	0
+S02121B	Fracture of orbital roof, right side, 7thB	0	0
+S02121D	Fracture of orbital roof, right side, 7thD	15	0
+S02121G	Fracture of orbital roof, right side, 7thG	15	0
+S02121K	Fracture of orbital roof, right side, 7thK	15	0
+S02121S	Fracture of orbital roof, right side, sequela	0	0
+S02122A	Fracture of orbital roof, left side, init	0	0
+S02122B	Fracture of orbital roof, left side, 7thB	0	0
+S02122D	Fracture of orbital roof, left side, 7thD	15	0
+S02122G	Fracture of orbital roof, left side, 7thG	15	0
+S02122K	Fracture of orbital roof, left side, 7thK	15	0
+S02122S	Fracture of orbital roof, left side, sequela	0	0
+S02129A	Fracture of orbital roof, unspecified side, init	0	0
+S02129B	Fracture of orbital roof, unspecified side, 7thB	0	0
+S02129D	Fracture of orbital roof, unspecified side, 7thD	0	0
+S02129G	Fracture of orbital roof, unspecified side, 7thG	0	0
+S02129K	Fracture of orbital roof, unspecified side, 7thK	0	0
+S02129S	Fracture of orbital roof, unspecified side, sequela	0	0
+S02831A	Fracture of medial orbital wall, right side, init	0	0
+S02831B	Fracture of medial orbital wall, right side, 7thB	0	0
+S02831D	Fracture of medial orbital wall, right side, 7thD	15	0
+S02831G	Fracture of medial orbital wall, right side, 7thG	15	0
+S02831K	Fracture of medial orbital wall, right side, 7thK	15	0
+S02831S	Fracture of medial orbital wall, right side, sequela	0	0
+S02832A	Fracture of medial orbital wall, left side, init	0	0
+S02832B	Fracture of medial orbital wall, left side, 7thB	0	0
+S02832D	Fracture of medial orbital wall, left side, 7thD	15	0
+S02832G	Fracture of medial orbital wall, left side, 7thG	15	0
+S02832K	Fracture of medial orbital wall, left side, 7thK	15	0
+S02832S	Fracture of medial orbital wall, left side, sequela	0	0
+S02839A	Fracture of medial orbital wall, unspecified side, init	0	0
+S02839B	Fracture of medial orbital wall, unspecified side, 7thB	0	0
+S02839D	Fracture of medial orbital wall, unspecified side, 7thD	0	0
+S02839G	Fracture of medial orbital wall, unspecified side, 7thG	0	0
+S02839K	Fracture of medial orbital wall, unspecified side, 7thK	0	0
+S02839S	Fracture of medial orbital wall, unspecified side, sequela	0	0
+S02841A	Fracture of lateral orbital wall, right side, init	0	0
+S02841B	Fracture of lateral orbital wall, right side, 7thB	0	0
+S02841D	Fracture of lateral orbital wall, right side, 7thD	15	0
+S02841G	Fracture of lateral orbital wall, right side, 7thG	15	0
+S02841K	Fracture of lateral orbital wall, right side, 7thK	15	0
+S02841S	Fracture of lateral orbital wall, right side, sequela	0	0
+S02842A	Fracture of lateral orbital wall, left side, init	0	0
+S02842B	Fracture of lateral orbital wall, left side, 7thB	0	0
+S02842D	Fracture of lateral orbital wall, left side, 7thD	15	0
+S02842G	Fracture of lateral orbital wall, left side, 7thG	15	0
+S02842K	Fracture of lateral orbital wall, left side, 7thK	15	0
+S02842S	Fracture of lateral orbital wall, left side, sequela	0	0
+S02849A	Fracture of lateral orbital wall, unspecified side, init	0	0
+S02849B	Fracture of lateral orbital wall, unspecified side, 7thB	0	0
+S02849D	Fracture of lateral orbital wall, unspecified side, 7thD	0	0
+S02849G	Fracture of lateral orbital wall, unspecified side, 7thG	0	0
+S02849K	Fracture of lateral orbital wall, unspecified side, 7thK	0	0
+S02849S	Fracture of lateral orbital wall, unspecified side, sequela	0	0
+S0285XA	Fracture of orbit, unspecified, init	0	0
+S0285XB	Fracture of orbit, unspecified, 7thB	0	0
+S0285XD	Fracture of orbit, unspecified, 7thD	0	0
+S0285XG	Fracture of orbit, unspecified, 7thG	0	0
+S0285XK	Fracture of orbit, unspecified, 7thK	0	0
+S0285XS	Fracture of orbit, unspecified, sequela	0	0
+T50911A	Poisoning by multiple unsp drug/meds/biol subst, acc, init	0	0
+T50911D	Poisoning by multiple unsp drug/meds/biol subst, acc, subs	0	0
+T50911S	Poisn by multiple unsp drug/meds/biol subst, acc, sequela	0	0
+T50912A	Poisn by multiple unsp drug/meds/biol subst, self-harm, init	0	0
+T50912D	Poisn by multiple unsp drug/meds/biol subst, self-harm, subs	0	0
+T50912S	Poisn by mult unsp drug/meds/biol subst, slf-hrm, sequela	0	0
+T50913A	Poisn by multiple unsp drug/meds/biol subst, assault, init	0	0
+T50913D	Poisn by multiple unsp drug/meds/biol subst, assault, subs	0	0
+T50913S	Poisn by mult unsp drug/meds/biol subst, assault, sequela	0	0
+T50914A	Poisoning by multiple unsp drug/meds/biol subst, undet, init	0	0
+T50914D	Poisoning by multiple unsp drug/meds/biol subst, undet, subs	0	0
+T50914S	Poisn by multiple unsp drug/meds/biol subst, undet, sequela	0	0
+T50915A	Adverse effect of multiple unsp drug/meds/biol subst, init	0	0
+T50915D	Adverse effect of multiple unsp drug/meds/biol subst, subs	0	0
+T50915S	Adverse effect of mult unsp drug/meds/biol subst, sequela	0	0
+T50916A	Undrdose of multiple unspecified drug/meds/biol subst, init	0	0
+T50916D	Undrdose of multiple unspecified drug/meds/biol subst, subs	0	0
+T50916S	Undrdose of multiple unsp drug/meds/biol subst, sequela	0	0
+T6701XA	Heatstroke and sunstroke, initial encounter	0	0
+T6701XD	Heatstroke and sunstroke, subsequent encounter	0	0
+T6701XS	Heatstroke and sunstroke, sequela	0	0
+T6702XA	Exertional heatstroke, initial encounter	0	0
+T6702XD	Exertional heatstroke, subsequent encounter	0	0
+T6702XS	Exertional heatstroke, sequela	0	0
+T6709XA	Other heatstroke and sunstroke, initial encounter	0	0
+T6709XD	Other heatstroke and sunstroke, subsequent encounter	0	0
+T6709XS	Other heatstroke and sunstroke, sequela	0	0
+Y35009A	Legal intrvnt w unsp firearm disch, unsp person inj, init	0	0
+Y35009D	Legal intrvnt w unsp firearm disch, unsp person inj, subs	0	0
+Y35009S	Legal intrvnt w unsp firearm disch, unsp person inj, sequela	0	0
+Y35019A	Legal intrvnt w injury by mch gun, unsp person injured, init	0	0
+Y35019D	Legal intrvnt w injury by mch gun, unsp person injured, subs	0	0
+Y35019S	Legal intrvnt w injury by mch gun, unsp person inj, sequela	0	0
+Y35029A	Legal intrvnt w injury by handgun, unsp person injured, init	0	0
+Y35029D	Legal intrvnt w injury by handgun, unsp person injured, subs	0	0
+Y35029S	Legal intrvnt w injury by handgun, unsp person inj, sequela	0	0
+Y35039A	Legal intrvnt w injury by rifl pelet, unsp person inj, init	0	0
+Y35039D	Legal intrvnt w injury by rifl pelet, unsp person inj, subs	0	0
+Y35039S	Legal intrvnt w injury by rifl pelet, unsp person inj, sqla	0	0
+Y35049A	Legal intrvnt w injury by rubr bulet, unsp person inj, init	0	0
+Y35049D	Legal intrvnt w injury by rubr bulet, unsp person inj, subs	0	0
+Y35049S	Legal intrvnt w injury by rubr bulet, unsp person inj, sqla	0	0
+Y35099A	Legal intervnt w firearm disch, unsp person injured, init	0	0
+Y35099D	Legal intervnt w firearm disch, unsp person injured, subs	0	0
+Y35099S	Legal intervnt w firearm disch, unsp person injured, sequela	0	0
+Y35109A	Legal intervnt w unsp explosv, unsp person injured, init	0	0
+Y35109D	Legal intervnt w unsp explosv, unsp person injured, subs	0	0
+Y35109S	Legal intervnt w unsp explosv, unsp person injured, sequela	0	0
+Y35119A	Legal intrvnt w injury by dynamite, unsp person inj, init	0	0
+Y35119D	Legal intrvnt w injury by dynamite, unsp person inj, subs	0	0
+Y35119S	Legal intrvnt w injury by dynamite, unsp person inj, sequela	0	0
+Y35129A	Legal intrvnt w inj by explosv shell, unsp person inj, init	0	0
+Y35129D	Legal intrvnt w inj by explosv shell, unsp person inj, subs	0	0
+Y35129S	Legal intrvnt w inj by explosv shell, unsp person inj, sqla	0	0
+Y35199A	Legal intervnt w other explosv, unsp person injured, init	0	0
+Y35199D	Legal intervnt w other explosv, unsp person injured, subs	0	0
+Y35199S	Legal intervnt w other explosv, unsp person injured, sequela	0	0
+Y35209A	Legal intervnt involving unsp gas, unsp person injured, init	0	0
+Y35209D	Legal intervnt involving unsp gas, unsp person injured, subs	0	0
+Y35209S	Legal intervnt w unsp gas, unsp person injured, sequela	0	0
+Y35219A	Legal intrvnt w injury by tear gas, unsp person inj, init	0	0
+Y35219D	Legal intrvnt w injury by tear gas, unsp person inj, subs	0	0
+Y35219S	Legal intrvnt w injury by tear gas, unsp person inj, sequela	0	0
+Y35299A	Legal intervnt w other gas, unsp person injured, init	0	0
+Y35299D	Legal intervnt w other gas, unsp person injured, subs	0	0
+Y35299S	Legal intervnt w other gas, unsp person injured, sequela	0	0
+Y35309A	Legal intrvnt w unsp blunt objects, unsp person inj, init	0	0
+Y35309D	Legal intrvnt w unsp blunt objects, unsp person inj, subs	0	0
+Y35309S	Legal intrvnt w unsp blunt objects, unsp person inj, sequela	0	0
+Y35319A	Legal intervnt involving baton, unsp person injured, init	0	0
+Y35319D	Legal intervnt involving baton, unsp person injured, subs	0	0
+Y35319S	Legal intervnt involving baton, unsp person injured, sequela	0	0
+Y35399A	Legal intrvnt w other blunt objects, unsp person inj, init	0	0
+Y35399D	Legal intrvnt w other blunt objects, unsp person inj, subs	0	0
+Y35399S	Legal intrvnt w other blunt obj, unsp person inj, sequela	0	0
+Y35409A	Legal intrvnt w unsp sharp objects, unsp person inj, init	0	0
+Y35409D	Legal intrvnt w unsp sharp objects, unsp person inj, subs	0	0
+Y35409S	Legal intrvnt w unsp sharp objects, unsp person inj, sequela	0	0
+Y35419A	Legal intervnt involving bayonet, unsp person injured, init	0	0
+Y35419D	Legal intervnt involving bayonet, unsp person injured, subs	0	0
+Y35419S	Legal intervnt w bayonet, unsp person injured, sequela	0	0
+Y35499A	Legal intrvnt w other sharp objects, unsp person inj, init	0	0
+Y35499D	Legal intrvnt w other sharp objects, unsp person inj, subs	0	0
+Y35499S	Legal intrvnt w other sharp obj, unsp person inj, sequela	0	0
+Y35819A	Legal intervnt w manhandling, unsp person injured, init	0	0
+Y35819D	Legal intervnt w manhandling, unsp person injured, subs	0	0
+Y35819S	Legal intervnt w manhandling, unsp person injured, sequela	0	0
+Y35831A	Legal intrvnt w a cond energy device, law enforc inj, init	0	0
+Y35831D	Legal intrvnt w a cond energy device, law enforc inj, subs	0	0
+Y35831S	Legal intrvnt w a cond energy device, law enforc inj, sqla	0	0
+Y35832A	Legal intervnt w a cond energy device, bystand injured, init	0	0
+Y35832D	Legal intervnt w a cond energy device, bystand injured, subs	0	0
+Y35832S	Legal intrvnt w a cond energy device, bystand inj, sequela	0	0
+Y35833A	Legal intervnt w a cond energy device, suspect injured, init	0	0
+Y35833D	Legal intervnt w a cond energy device, suspect injured, subs	0	0
+Y35833S	Legal intrvnt w a cond energy device, suspect inj, sequela	0	0
+Y35839A	Legal intrvnt w a cond energy device, unsp person inj, init	0	0
+Y35839D	Legal intrvnt w a cond energy device, unsp person inj, subs	0	0
+Y35839S	Legal intrvnt w a cond energy device, unsp person inj, sqla	0	0
+Y3599XA	Legal intervnt, means unsp, unspecified person injured, init	0	0
+Y3599XD	Legal intervnt, means unsp, unspecified person injured, subs	0	0
+Y3599XS	Legal intervnt, means unsp, unsp person injured, sequela	0	0
+Z01020	Enctr for ex of eyes and vis fol fail vis scrn w/o abn find	0	0
+Z01021	Enctr for exam of eyes and vis fol fail vis scrn wbn find	0	0
+Z117	Encounter for testing for latent tuberculosis infection	0	0
+Z227	Latent tuberculosis	0	0
+Z7184	Encounter for health counseling related to travel	0	0
+Z86002	Pers hx of in-situ neoplasm of other and unsp genital organs	0	0
+Z86003	Pers hx of in-situ neoplm of oral cavity, esoph and stomach	0	0
+Z86004	Pers hx of in-situ neoplasm of other and unsp dgstv orgs	0	0
+Z86005	Pers hx of in-situ neoplasm of middle ear and resp sys	0	0
+Z86006	Personal history of melanoma in-situ	0	0
+Z86007	Personal history of in-situ neoplasm of skin	0	0
+Z8615	Personal history of latent tuberculosis infection	0	0
+Z9682	Presence of neurostimulator	0	0
+			
+			
+ICD-10-CM Diagnoses Code Changes			
+The following diagnoses code(s) were deleted, effective 10/01/2019			
+DIAGNOSIS	DESCRIPTION	DIAGNOSTIC_GROUP	NRS_DIAGNOSTIC_GROUP
+D813	Adenosine deaminase [ADA] deficiency	0	0
+H8141	Vertigo of central origin, right ear	11	0
+H8142	Vertigo of central origin, left ear	11	0
+H8143	Vertigo of central origin, bilateral	11	0
+H8149	Vertigo of central origin, unspecified ear	11	0
+I481	Persistent atrial fibrillation	0	0
+I482	Chronic atrial fibrillation	0	0
+Q660	Congenital talipes equinovarus	0	0
+Q661	Congenital talipes calcaneovarus	0	0
+Q6621	Congenital metatarsus primus varus	0	0
+Q6622	Congenital metatarsus adductus	0	0
+Q663	Other congenital varus deformities of feet	0	0
+Q664	Congenital talipes calcaneovalgus	0	0
+Q667	Congenital pes cavus	0	0
+Q669	Congenital deformity of feet, unspecified	0	0
+Q796	Ehlers-Danlos syndrome	0	0
+Q871	Congenital malform syndromes predom assoc w short stature	0	0
+R828	Abnormal findings on cytolog and histolog exam of urine	0	0
+T670XXA	Heatstroke and sunstroke, initial encounter	0	0
+T670XXD	Heatstroke and sunstroke, subsequent encounter	0	0
+T670XXS	Heatstroke and sunstroke, sequela	0	0
+			
+ICD-10-CM Diagnoses Description Changes			
+The following existing ICD-10 CM Diagnoses Code(s) had a description change, effective 10/01/2019			
+DIAGNOSIS	NEW_DESCRIPTION	OLD_DESCRIPTION	
+B9621	Shig tox E coli [STEC] O157 causing diseases classd elswhr	Shiga toxin E coli (STEC) O157 causing dis classd elswhr	
+B9622	Oth shiga toxin E coli [STEC] causing diseases classd elswhr	Oth shiga toxin E coli (STEC) causing diseases classd elswhr	
+B9623	Unsp shig tox E coli [STEC] causing diseases classd elswhr	Unsp shiga toxin E coli (STEC) causing dis classd elswhr	
+G43A0	Cyclical vomiting, in migraine, not intractable	Cyclical vomiting, not intractable	
+G43A1	Cyclical vomiting, in migraine, intractable	Cyclical vomiting, intractable	
+I70238	Athscl native art of right leg with ulcer oth prt low leg	Athscl natv art of right leg w ulcer oth prt lower right leg	
+I70248	Athscl native art of left leg with ulcer oth prt low leg	Athscl native art of left leg w ulcer oth prt lower left leg	
+J440	Chr obstructive pulmon disease with (acute) lower resp infct	Chronic obstructive pulmon disease w acute lower resp infct	
+M50120	Mid-cervical disc disorder, unspecified level	Mid-cervical disc disorder, unspecified	
+M6688	Spontaneous rupture of other tendons, other sites	Spontaneous rupture of other tendons, other	
+M67839	Oth disrd of synovium and tendon, unspecified wrist	Oth disrd of synovium and tendon, unspecified forearm	
+M7750	Other enthesopathy of unspecified foot and ankle	Other enthesopathy of unspecified foot	
+M7751	Other enthesopathy of right foot and ankle	Other enthesopathy of right foot	
+M7752	Other enthesopathy of left foot and ankle	Other enthesopathy of left foot	
+N35814	Other anterior urethral stricture, male	Other anterior urethral stricture, male, anterior	
+R82993	Hyperuricosuria	Hyperuricoscuria	
+T40906A	Underdosing of unspecified psychodysleptics, init	Underdosing of unspecified psychodysleptics, init encntr	
+T40906D	Underdosing of unspecified psychodysleptics, subs	Underdosing of unspecified psychodysleptics, subs encntr	
+T441X6D	Underdosing of other parasympath, subsequent encounter	Underdosing of other parasympathomimetics, subs encntr	
+V4313XA	Car pasngr injured in clsn with pick-up truck nontraf, init	Car passenger injured in collision w pick-up nontraf, init	
+V4313XD	Car pasngr injured in clsn with pick-up truck nontraf, subs	Car passenger injured in collision w pick-up nontraf, subs	
+V4313XS	Car pasngr inj in clsn with pick-up truck nontraf, sequela	Car passenger injured in clsn w pick-up nontraf, sequela	
+Z4542	Encounter for adjustment and management of neurostimulator	Encounter for adjust and mgmt of neuropacemaker (brain)	
+Z6843	Body mass index (BMI) 50.0-59.9, adult	Body mass index (BMI) 50-59.9, adult	

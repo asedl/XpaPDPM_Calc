@@ -1,0 +1,2 @@
+
+char CalcReducedPhysicalFunction(int RestorativeNursingCount, int NursingFunctionScore);

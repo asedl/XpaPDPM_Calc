@@ -1,0 +1,167 @@
+V04.5	Vaccin for rabies
+V07.0	Prophylactic isolation
+V07.1	Desensitiza to allergens
+V07.2	Prophylact immunotherapy
+V07.39	Other prophylac chemothr
+V07.51	Prophylactic use SERMs
+V07.52	Prophylact use aromatase
+V07.59	Prphyl ot agnt af estrgn
+V07.8	Prophylactic measure NEC
+V07.9	Prophylactic measure NOS
+V09.0	Inf mcrg rstn pncllins
+V09.1	Inf mcrg rstn b-lactam
+V09.2	Inf mcrg rstn macrolides
+V09.3	Inf mcrg rstn ttrcycln
+V09.4	Inf mcrg rstn amnglcsds
+V09.50	Inf mcr rst qn flr nt ml
+V09.51	Inf mcrg rstn qn flrq ml
+V09.6	Inf mcrg rstn sulfnmides
+V09.70	Inf mcr rst oth ag nt ml
+V09.71	Inf mcrg rstn oth ag mlt
+V09.80	Inf mcr rst ot drg nt ml
+V09.81	Inf mcrg rstn oth drg ml
+V09.90	Infc mcrg drgrst nt mult
+V09.91	Infc mcrg drgrst mult
+V46.0	Dependence on aspirator
+V46.11	Respirator depend status
+V46.12	Resp depend-powr failure
+V46.13	Weaning from respirator
+V46.14	Mech comp respirator
+V46.2	Depend-supplement oxygen
+V46.3	Wheelchair dependence
+V46.8	Machine dependence NEC
+V46.9	Machine dependence NOS
+V50.0	Hair transplant
+V50.1	Plastic surgery NEC
+V50.2	Routine circumcision
+V50.3	Ear piercing
+V50.41	Prphylct orgn rmvl brst
+V50.42	Prphylct orgn rmvl ovary
+V50.49	Prphylct orgn rmvl other
+V50.8	Elective surgery NEC
+V50.9	Elective surgery NOS
+V51.0	Brst reconst fol mastect
+V51.8	Aftercre plastc surg NEC
+V52.0	Fitting artificial arm
+V52.1	Fitting artificial leg
+V52.2	Fitting artificial eye
+V52.3	Fitting dental prosthes
+V52.4	Fit/adj breast pros/impl
+V52.8	Fitting prosthesis NEC
+V52.9	Fitting prosthesis NOS
+V53.01	Adj cerebral vent shunt
+V53.02	Adjust neuropacemaker
+V53.09	Adj nerv syst device NEC
+V53.1	Fit contact lens/glasses
+V53.2	Adjustment hearing aid
+V53.31	Ftng cardiac pacemaker
+V53.32	Ftng autmtc dfibrillator
+V53.39	Ftng oth cardiac device
+V53.4	Fit orthodontic device
+V53.50	Fitting and adjustment of intestinal appliance and device
+V53.51	Fitting and adjustment of gastric lap band
+V53.59	Fitting and adjustment of other gastrointestinal appliance and device
+V53.6	Fitting urinary devices
+V53.7	Fit orthopedic devices
+V53.8	Adjustment of wheelchair
+V53.90	Fit/adjust device NOS
+V53.91	Fit/adjust insulin pump
+V53.99	Fit/adjust device NEC
+V54.01	Removal int fixation dev
+V54.02	Length/adjust growth rod
+V54.09	Aftrcre int fixation dev
+V54.10	Aftrcre traum fx arm NOS
+V54.11	Aftrcare traum fx up arm
+V54.12	Aftrcre traum fx low arm
+V54.13	Aftrcre traumatic fx hip
+V54.14	Aftrcre traum fx leg NOS
+V54.15	Aftrcare traum fx up leg
+V54.16	Aftrcre traum fx low leg
+V54.17	Aftrcre traum fx vertebr
+V54.19	Aftrce traum fx bone NEC
+V54.20	Aftrcare path fx arm NOS
+V54.21	Aftercare path fx up arm
+V54.22	Aftrcare path fx low arm
+V54.23	Aftercare path fx hip
+V54.24	Aftrcare path fx leg NOS
+V54.25	Aftrcare path fx up leg
+V54.26	Aftrcare path fx low leg
+V54.27	Aftrcare path fx vertebr
+V54.29	Aftrcre path fx bone NEC
+V54.81	Aftercare joint replace
+V54.82	Aftercare following explanation of joint prosthesis
+V54.89	Orthopedic aftercare NEC
+V54.9	Orthopedic aftercare NOS
+V55.1	Atten to gastrostomy
+V55.2	Atten to ileostomy
+V55.3	Atten to colostomy
+V55.4	Atten to enterostomy NEC
+V55.7	Atten artificial vagina
+V55.8	Attn to artif open NEC
+V55.9	Attn to artif open NOS
+V56.0	Renal dialysis encounter
+V56.1	Ft/adj xtrcorp dial cath
+V56.2	Fit/adj perit dial cath
+V56.31	Hemodialysis testing
+V56.32	Peritoneal dialysis test
+V56.8	Dialysis encounter, NEC
+V57.0	Breathing exercises
+V57.1	Physical therapy NEC
+V57.21	Encntr occupatnal thrpy
+V57.22	Encntr vocational thrpy
+V57.3	Speech therapy
+V57.4	Orthoptic training
+V57.81	Orthotic training
+V57.89	Rehabilitation proc NEC
+V57.9	Rehabilitation proc NOS
+V58.0	Radiotherapy encounter
+V58.11	Antineoplastic chemo enc
+V58.12	Immunotherapy encounter
+V58.2	Blood transfusion, no dx
+V58.30	Attn rem nonsurg dressng
+V58.31	Attn rem surg dressing
+V58.32	Attn removal of sutures
+V58.41	Encntr plnd po wnd clsr
+V58.42	Aftercare neoplasm surg
+V58.43	Aftrcare inj/trauma surg
+V58.44	Aftercare organ transplt
+V58.49	Postop oth specfd aftrcr
+V58.5	Orthodontics aftercare
+V58.61	Long-term use anticoagul
+V58.62	Long-term use antibiotic
+V58.63	Lng use antiplte/thrmbtc
+V58.64	Long-term anti-inflamtry
+V58.65	Long-term use steroids
+V58.66	Long-term use of aspirin
+V58.67	Long-term use of insulin
+V58.68	Long-term (current) use of bisphosphonates
+V58.69	Long-term use meds NEC
+V58.71	Aft surg sense org NEC
+V58.72	Aftcre surg nerv sys NEC
+V58.73	Aft surg circ syst NEC
+V58.74	Aftrcre surg respsys NEC
+V58.75	Aft oral cav/dig sys NEC
+V58.76	Aftrcre surg GU syst NEC
+V58.77	Aft surg skin/subcu NEC
+V58.78	Aftrcre surg MS syst NEC
+V58.81	Fit/adj vascular cathetr
+V58.82	Fit/adj non-vsc cath NEC
+V58.83	Therapeutic drug monitor
+V58.89	Other specfied aftercare
+V58.9	Aftercare NOS
+V59.01	Blood donor-whole blood
+V59.02	Blood donor-stem cells
+V59.09	Blood donor NEC
+V59.1	Skin donor
+V59.2	Bone donor
+V59.3	Bone marrow donor
+V59.4	Kidney donor
+V59.5	Cornea donor
+V59.6	Liver donor
+V59.70	Egg donor NEC
+V59.71	Egg donor age <35 anon
+V59.72	Egg donor age <35 desig
+V59.73	Egg donor age 35+ anon
+V59.74	Egg donor age 35+ desig
+V59.8	Org or tissue donor NEC
+V59.9	Org or tissue donor NOS

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{329BBADB-D160-487B-B766-4D5ED33EE7B7}</ProjectGuid>
+    <RootNamespace>PDPM_Grouper</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.28916.169</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PDPM_GROUPER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>C:\Magic\Xpa3.3\pdpm.dll</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PDPM_GROUPER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(SolutionDir)$(Configuration)\pdpm.dll</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BehavioralSymptoms.cpp" />
+    <ClCompile Include="CheckI8000Base.cpp" />
+    <ClCompile Include="CheckI8000Logic.cpp" />
+    <ClCompile Include="ClinicallyComplex.cpp" />
+    <ClCompile Include="ConvertToDigit.cpp" />
+    <ClCompile Include="DiagnosisCodesLoaded.cpp" />
+    <ClCompile Include="ExtensiveServices.cpp" />
+    <ClCompile Include="ICD10Retrieval.cpp" />
+    <ClCompile Include="mdsgrouper.cpp" />
+    <ClCompile Include="MiscCalculations.cpp" />
+    <ClCompile Include="NTAComponent.cpp" />
+    <ClCompile Include="NursingComponent.cpp" />
+    <ClCompile Include="OTComponent.cpp" />
+    <ClCompile Include="PTComponent.cpp" />
+    <ClCompile Include="ReducedPhysicalFunction.cpp" />
+    <ClCompile Include="SLPComponent.cpp" />
+    <ClCompile Include="SpecialCareHigh.cpp" />
+    <ClCompile Include="SpecialCareLow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BehavioralSymptoms.h" />
+    <ClInclude Include="CheckI8000Base.h" />
+    <ClInclude Include="CheckI8000Logic.h" />
+    <ClInclude Include="ClinicallyComplex.h" />
+    <ClInclude Include="ConvertToDigit.h" />
+    <ClInclude Include="DiagnosisCodesLoaded.h" />
+    <ClInclude Include="ExtensiveServices.h" />
+    <ClInclude Include="ICD10Retrieval.h" />
+    <ClInclude Include="mdsgrouper.h" />
+    <ClInclude Include="MiscCalculations.h" />
+    <ClInclude Include="NTAComponent.h" />
+    <ClInclude Include="NursingComponent.h" />
+    <ClInclude Include="OTComponent.h" />
+    <ClInclude Include="PTComponent.h" />
+    <ClInclude Include="ReducedPhysicalFunction.h" />
+    <ClInclude Include="SLPComponent.h" />
+    <ClInclude Include="SpecialCareHigh.h" />
+    <ClInclude Include="SpecialCareLow.h" />
+    <ClInclude Include="userdll.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

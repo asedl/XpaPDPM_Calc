@@ -1,0 +1,51 @@
+1	Primary or Other Diagnosis = Blindness/Low Vision	3	3	3	3
+2	Primary or Other Diagnosis = Blood disorders	2	5	0	0
+3	Primary or Other Diagnosis = Cancer, selected benign neoplasms	4	7	3	10
+4	Primary Diagnosis = Diabetes	5	12	1	8
+5	Other Diagnosis = Diabetes	2	4	1	4
+6	Primary or Other Diagnosis = Dysphagia AND Primary or Other Diagnosis = Neuro 3 - Stroke	2	6	0	6
+7	Primary or Other Diagnosis = Dysphagia AND M0250 (Therapy at home) = 3 (Enteral)	0	6	0	0
+8	Primary or Other Diagnosis = Gastrointestinal disorders	2	6	1	4
+9	Primary or Other Diagnosis = Gastrointestinal disorders AND M0550 (ostomy)= 1 or 2	3	0	0	0
+10	Primary or Other Diagnosis = Gastrointestinal disorders AND Primary or Other Diagnosis = Neuro 1 - Brain disorders and paralysis, OR Neuro 2 - Peripheral neurological disorders, OR Neuro 3 - Stroke, OR Neuro 4 - Multiple Sclerosis	0	0	2	0
+11	Primary or Other Diagnosis = Heart Disease OR Hypertension	3	7	1	8
+12	Primary Diagnosis = Neuro 1 - Brain disorders and paralysis	3	8	5	8
+13	Primary or Other Diagnosis = Neuro 1 - Brain disorders and paralysis AND M0680 (Toileting) = 2 or more	3	10	3	10
+14	Primary or Other Diagnosis = Neuro 1 - Brain disorders and paralysis OR Neuro 2 - Peripheral neurological disorders AND M0650 or M0660 (Dressing upper or lower body)= 1, 2, or 3	2	4	2	2
+15	Primary or Other Diagnosis = Neuro 3 - Stroke	0	1	0	0
+16	Primary or Other Diagnosis = Neuro 3 - Stroke AND M0650 or M0660 (Dressing upper or lower body)= 1, 2, or 3	1	3	2	8
+17	Primary or Other Diagnosis = Neuro 3 - Stroke ANDM0700 (Ambulation) = 3 or more	1	5	0	0
+18	Primary or Other Diagnosis = Neuro 4 - Multiple Sclerosis AND AT LEAST ONE OF THE FOLLOWING:M0670 (bathing) = 2 or more OR M0680 (Toileting) = 2 or moreOR M0690 (Transferring) = 2 or more OR M0700 (Ambulation) = 3 or more	3	3	12	18
+19	Primary or Other Diagnosis = Ortho 1 - Leg Disorders or Gait abnormality AND M0460 (most problematic pressure ulcer stage)= 1, 2, 3 or 4	2	0	0	0
+20	Primary or Other Diagnosis = Ortho 1 - Leg OR Ortho 2 - Other orthopedic disorders AND M0250 (Therapy at home) = 1 (IV/Infusion) or 2 (Parenteral)	5	5	0	0
+21	Primary or Other Diagnosis = Psych 1 - Affective and other psychoses, depression	3	5	2	5
+22	Primary or Other Diagnosis = Psych 2 - Degenerative and other organic psychiatric disorders	1	2	0	2
+23	Primary or Other Diagnosis = Pulmonary disorders	1	5	1	5
+24	Primary or Other Diagnosis = Pulmonary disorders AND M0700 (Ambulation) = 1 or more	1	0	0	0
+25	Primary Diagnosis = Skin 1 -Traumatic wounds, burns, and post-operative complications	10	20	8	20
+26	Other Diagnosis = Skin 1 - Traumatic wounds, burns, post-operative complications	6	6	4	4
+27	Primary or Other Diagnosis = Skin 1 -Traumatic wounds, burns, and post-operative complications OR Skin 2 - Ulcers and other skin conditions AND M0250 (Therapy at home) = 1 (IV/Infusion) or 2 (Parenteral)	2	0	2	0
+28	Primary or Other Diagnosis = Skin 2 - Ulcers and other skin conditions 	6	12	5	12
+29	Primary or Other Diagnosis = Tracheostomy 	4	4	4	0
+30	Primary or Other Diagnosis = Urostomy/Cystostomy 	6	23	4	23
+31	M0250 (Therapy at home) = 1 (IV/Infusion) or 2 (Parenteral)	8	15	5	12
+32	M0250 (Therapy at home) = 3 (Enteral)	4	12	0	12
+33	M0390 (Vision) = 1 or more	1	0	0	1
+34	M0420 (Pain)= 2 or 3	1	0	0	0
+35	M0450 = Two or more pressure ulcers at stage 3 or 4	3	3	5	5
+36	M0460 (Most problematic pressure ulcer stage)= 1 or 2	5	11	5	11
+37	M0460 (Most problematic pressure ulcer stage)= 3 or 4	16	26	12	23
+38	M0476 (Stasis ulcer status)= 2	8	8	8	8
+39	M0476 (Stasis ulcer status)= 3	11	11	11	11
+40	M0488 (Surgical wound status)= 2	0	2	3	0
+41	M0488 (Surgical wound status)= 3	4	4	4	4
+42	M0490 (Dyspnea) = 2, 3, or 4	2	2	0	0
+43	M0540 (Bowel Incontinence) = 2 to 5	1	2	1	0
+44	M0550 (Ostomy)= 1 or 2	5	9	3	9
+45	M0800 (Injectable Drug Use) = 0, 1, or 2	1	1	2	4
+46	M0650 or M0660 (Dressing upper or lower body)= 1, 2, or 3	2	4	2	2
+47	M0670 (Bathing) = 2 or more	3	3	6	6
+48	M0680 (Toileting) = 2 or more	2	3	2	0
+49	M0690 (Transferring) = 2 or more	0	2	0	0
+50	M0700 (Ambulation) = 1 or 2	1	0	1	0
+51	M0700 (Ambulation) = 3 or more	3	4	4	5

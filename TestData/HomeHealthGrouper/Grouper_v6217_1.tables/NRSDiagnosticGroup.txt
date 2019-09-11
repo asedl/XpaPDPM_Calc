@@ -1,0 +1,13 @@
+DiagnosticGroup	Description
+1	Anal Fissure, fistula and abscess
+2	Cellulitis and abscess
+3	Diabetic Ulcers
+4	Gangrene
+5	Malignant neoplasms of skin
+6	Non-pressure and non-stasis ulcers (other than diabetic)
+7	Other infections of skin and subcutaneous tissue
+8	Post-operative Complications
+9	Traumatic wounds, burns and post-operative complications
+10	Z-code, Cystostomy Care
+11	Z-code, Tracheostomy Care
+12	Z-code, Urostomy Care

@@ -1,0 +1,52 @@
+ID	Description	Equation1	Equation2	Equation3	Equation4
+1	Primary or Other Diagnosis = Blindness/Low Vision	0	0	0	0
+2	Primary or Other Diagnosis = Blood disorders	0	2	0	0
+3	Primary or Other Diagnosis = Cancer, selected benign neoplasms	0	4	0	4
+4	Primary Diagnosis = Diabetes	0	3	0	3
+5	Other Diagnosis = Diabetes	1	0	0	0
+6	Primary or Other Diagnosis = Dysphagia AND Primary or Other Diagnosis = Neuro 3 - Stroke	2	14	0	10
+7	Primary or Other Diagnosis = Dysphagia AND M1030 (Therapy at home) = 3 (Enteral)	0	5	0	5
+8	Primary or Other Diagnosis = Gastrointestinal disorders	0	1	0	2
+9	Primary or Other Diagnosis = Gastrointestinal disorders AND M1630 (ostomy)= 1 or 2	0	5	0	0
+10	Primary or Other Diagnosis = Gastrointestinal disorders AND Primary or Other Diagnosis = Neuro 1 - Brain disorders and paralysis, OR Neuro 2 - Peripheral neurological disorders, OR Neuro 3 - Stroke, OR Neuro 4 - Multiple Sclerosis	0	0	0	0
+11	Primary or Other Diagnosis = Heart Disease OR Hypertension	2	3	0	3
+12	Primary Diagnosis = Neuro 1 - Brain disorders and paralysis	2	7	4	7
+13	Primary or Other Diagnosis = Neuro 1 - Brain disorders and paralysis AND M1840 (Toilet transfer) = 2 or more	0	2	0	0
+14	Primary or Other Diagnosis = Neuro 1 - Brain disorders and paralysis OR Neuro 2 - Peripheral neurological disorders AND M1810 or M1820 (Dressing upper or lower body)= 1, 2, or 3	3	4	1	3
+15	Primary or Other Diagnosis = Neuro 3 - Stroke	3	6	2	0
+16	Primary or Other Diagnosis = Neuro 3 - Stroke AND M1810 or M1820 (Dressing upper or lower body)= 1, 2, or 3	0	4	0	4
+17	Primary or Other Diagnosis = Neuro 3 - Stroke AND M1860 (Ambulation) = 4 or more	0	0	0	0
+18	Primary or Other Diagnosis = Neuro 4 - Multiple Sclerosis AND AT LEAST ONE OF THE FOLLOWING: M1830 (Bathing) = 2 or more OR M1840 (Toilet transfer) = 2 or more OR M1850 (Transferring) = 2 or more OR M1860 (Ambulation) = 4  or more	2	6	3	8
+19	Primary or Other Diagnosis = Ortho 1 - Leg Disorders or Gait Disorders AND M1324 (most problematic pressure ulcer stage)= 1, 2, 3 or 4	7	2	7	0
+20	Primary or Other Diagnosis = Ortho 1 - Leg OR Ortho 2 - Other orthopedic disorders AND M1030 (Therapy at home) = 1 (IV/Infusion) or 2 (Parenteral)	1	2	3	0
+21	Primary or Other Diagnosis = Psych 1 - Affective and other psychoses, depression	0	0	0	0
+22	Primary or Other Diagnosis = Psych 2 - Degenerative and other organic psychiatric disorders	0	0	0	0
+23	Primary or Other Diagnosis = Pulmonary disorders	0	0	0	1
+24	Primary or Other Diagnosis = Pulmonary disorders AND M1860 (Ambulation) = 1 or more	0	1	0	0
+25	Primary Diagnosis = Skin 1 - Traumatic wounds, burns and post-operative complications	2	15	6	15
+26	Other Diagnosis = Skin 1 - Traumatic wounds, burns and post-operative complications	5	11	7	11
+27	Primary or Other Diagnosis = Skin 1 - Traumatic wounds, burns, and post-operative complications OR Skin 2 - Ulcers and other skin conditions AND M1030 (Therapy at home) = 1 (IV/Infusion) or 2 (Parenteral)	0	0	0	0
+28	Primary or Other Diagnosis = Skin 2 - Ulcers and other skin conditions	2	15	8	15
+29	Primary or Other Diagnosis = Tracheostomy	1	10	0	10
+30	Primary or Other Diagnosis = Urostomy/Cystostomy	0	17	0	9
+31	M1030 (Therapy at home) = 1 (IV/Infusion) or 2 (Parenteral)	0	10	1	10
+32	M1030 (Therapy at home) = 3 (Enteral)	0	12	0	6
+33	M1200 (Vision) = 1 or more	1	0	0	0
+34	M1242 (Pain)= 3 or 4	3	0	2	1
+35	M1311 = Two or more pressure ulcers at stage 3 or 4	2	4	2	4
+36	M1324 (Most problematic pressure ulcer stage)= 1 or 2	4	17	6	16
+37	M1324 (Most problematic pressure ulcer stage)= 3 or 4	6	27	8	23
+38	M1334 (Stasis ulcer status)= 2	3	12	5	12
+39	M1334 (Stasis ulcer status)= 3	5	15	7	15
+40	M1342 (Surgical wound status)= 2	2	6	5	12
+41	M1342 (Surgical wound status)= 3	0	5	4	8
+42	M1400 (Dyspnea) = 2, 3, or 4	1	1	0	0
+43	M1620 (Bowel Incontinence) = 2 to 5	0	3	0	3
+44	M1630 (Ostomy)= 1 or 2	2	9	2	7
+45	M2030 (Injectable Drug Use) = 0, 1, 2, or 3	0	0	0	0
+46	M1810 or M1820 (Dressing upper or lower body)= 1, 2, or 3	1	2	0	0
+47	M1830 (Bathing) = 2 or more	6	4	5	0
+48	M1840 (Toilet transferring) = 2 or more	1	0	0	0
+49	M1850 (Transferring) = 2 or more	2	1	2	0
+50	M1860 (Ambulation) = 1, 2 or 3	6	0	4	0
+51	M1860 (Ambulation) = 4 or more	7	7	6	6
