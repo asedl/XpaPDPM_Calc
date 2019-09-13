@@ -6,7 +6,7 @@
 #include "CheckI8000Base.h"
 #include "CheckI8000Logic.h"
 
-int ReturnNTAScore(char* I8000)
+int ReturnNTAScore(char* I8000, int *I8000Code)
 {int I8000Score = 0;
 bool LungTransplant = false; bool MajorOrgan = false; bool OpportunisticInfections = false;
 bool BoneNecrosis = false; bool MyeloidLeukemia = false; bool Endocarditis = false;
@@ -26,6 +26,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 3;
+		*I8000Code = 1;
 		}
 }
 if (!CodeFound)
@@ -34,6 +35,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 2;
+		*I8000Code = 2;
 		}
 }
 if (!CodeFound)
@@ -42,6 +44,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 2;
+		*I8000Code = 3;
 		}
 }
 if (!CodeFound)
@@ -50,6 +53,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 2;
+		*I8000Code = 4;
 		}
 }
 if (!CodeFound)
@@ -57,7 +61,8 @@ if (!CodeFound)
     CodeFound = CheckMyeloidLeukemia(I8000);
 		if (CodeFound)
 		{
-		I8000Score = 1;
+		I8000Score = 2;
+		*I8000Code = 5;
 		}
 }
 if (!CodeFound)
@@ -66,6 +71,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 6;
 		}
 }
 if (!CodeFound)
@@ -74,6 +80,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 7;
 		}
 }
 if (!CodeFound)
@@ -82,6 +89,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 8;
 		}
 }
 if (!CodeFound)
@@ -90,6 +98,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 9;
 		}
 }
 if (!CodeFound)
@@ -98,6 +107,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 10;
 		}
 }
 if (!CodeFound)
@@ -106,6 +116,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 11;
 		}
 }
 if (!CodeFound)
@@ -114,6 +125,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 12;
 		}
 }
 if (!CodeFound)
@@ -122,6 +134,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 13;
 		}
 }
 if (!CodeFound)
@@ -130,6 +143,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 14;
 		}
 }
 if (!CodeFound)
@@ -138,6 +152,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 15;
 		}
 }
 if (!CodeFound)
@@ -146,6 +161,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 16;
 		}
 }
 if (!CodeFound)
@@ -154,6 +170,7 @@ if (!CodeFound)
 		if (CodeFound == true)
 		{
 		I8000Score = 1;
+		*I8000Code = 17;
 		}
 }
 if (!CodeFound)
@@ -162,6 +179,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 18;
 		}
 }
 if (!CodeFound)
@@ -170,6 +188,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 19;
 		}
 }
 if (!CodeFound)
@@ -178,6 +197,7 @@ if (!CodeFound)
 		if (CodeFound == true)
 		{
 		I8000Score = 1;
+		*I8000Code = 20;
 		}
 }
 if (!CodeFound)
@@ -186,6 +206,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 21;
 		}
 }
 if (!CodeFound)
@@ -194,6 +215,7 @@ if (!CodeFound)
 		if (CodeFound == true)
 		{	
 		I8000Score = 1;
+		*I8000Code = 22;
 		}
 }
 if (!CodeFound)
@@ -202,6 +224,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 23;
 		}
 }
 if (!CodeFound)
@@ -210,6 +233,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 24;
 		}
 }
 if (!CodeFound)
@@ -218,6 +242,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 25;
 		}
 }
 if (!CodeFound)
@@ -226,6 +251,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 26;
 		}
 }
 if (!CodeFound)
@@ -234,6 +260,7 @@ if (!CodeFound)
 		if (CodeFound)
 		{
 		I8000Score = 1;
+		*I8000Code = 27;
 		}
 }
 

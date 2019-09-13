@@ -21,7 +21,7 @@ bool CheckALS(char* I8000)
 
 bool CheckApraxia(char* I8000)
 {bool Apraxia = false;
- for( int index = 0; index < 8; index++ ) {
+ for( int index = 0; index < 6; index++ ) {
       if(0 == strcmp(I8000, ApraxiaCodes[index]))
 	  {
 	  Apraxia = true;
@@ -156,7 +156,7 @@ bool CheckEndocarditis(char* I8000)
 
 bool CheckImmuneDisorders(char* I8000)
 {bool ImmuneDisorders = false;
- for( int index = 0; index < 39; index++ ) {
+ for( int index = 0; index < 47; index++ ) {
       if(0 == strcmp(I8000, ImmuneDisordersCodes[index]))
 	  {
 	  ImmuneDisorders = true;
@@ -252,7 +252,7 @@ bool CheckChronicPancreatitis(char* I8000)
 
 bool CheckProlificRetinopathy(char* I8000)
 {bool ProlificRetinopathy = false;
- for( int index = 0; index < 14; index++ ) {
+ for( int index = 0; index < 124; index++ ) {
       if(0 == strcmp(I8000, ProlificRetinopathyCodes[index]))
 	  {
 	  ProlificRetinopathy = true;
@@ -264,7 +264,7 @@ bool CheckProlificRetinopathy(char* I8000)
 
 bool CheckImplantedDevice(char* I8000)
 {bool ImplantedDevice = false;
- for( int index = 0; index < 267; index++ ) {
+ for( int index = 0; index < 322; index++ ) {
       if(0 == strcmp(I8000, ImplantedDeviceCodes[index]))
 	  {
 	  ImplantedDevice = true;
@@ -312,7 +312,7 @@ bool CheckMyelodysplastic(char* I8000)
 
 bool CheckTissueDisorders(char* I8000)
 {bool TissueDisorders = false;
- for( int index = 0; index < 129; index++ ) {
+ for( int index = 0; index < 137; index++ ) {
       if(0 == strcmp(I8000, TissueDisordersCodes[index]))
 	  {
 	  TissueDisorders = true;
@@ -324,7 +324,7 @@ bool CheckTissueDisorders(char* I8000)
 
 bool CheckDiabeticRetinopathy(char* I8000)
 {bool DiabeticRetinopathy = false;
- for( int index = 0; index < 32; index++ ) {
+ for( int index = 0; index < 130; index++ ) {
       if(0 == strcmp(I8000, DiabeticRetinopathyCodes[index]))
 	  {
 	  DiabeticRetinopathy = true;
@@ -336,7 +336,7 @@ bool CheckDiabeticRetinopathy(char* I8000)
 
 bool CheckSevereSkin(char* I8000)
 {bool SevereSkin = false;
- for( int index = 0; index < 92; index++ ) {
+ for( int index = 0; index < 96; index++ ) {
       if(0 == strcmp(I8000, SevereSkinCodes[index]))
 	  {
 	  SevereSkin = true;
@@ -348,7 +348,7 @@ bool CheckSevereSkin(char* I8000)
 
 bool CheckIntractableEpilepsy(char* I8000)
 {bool IntractableEpilepsy = false;
- for( int index = 0; index < 21; index++ ) {
+ for( int index = 0; index < 22; index++ ) {
       if(0 == strcmp(I8000, IntractableEpilepsyCodes[index]))
 	  {
 	  IntractableEpilepsy = true;

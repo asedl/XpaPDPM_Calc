@@ -221,7 +221,7 @@ int DetermineNTAScore(int I8000Score, int IntraVenousMedicationScore, int Ventil
 NTAScore = I8000Score + IntraVenousMedicationScore + VentilatorScore + TransfusionScore + MultipleSclerosisScore 
 		   + AsthmaCOPDScore + WoundInfectionScore + DiabetesMellitusScore + DiabeticFootScore + TracheostomyCareScore
 		   + ResistantOrganismScore + IsolationScore + RadiationScore + UnhealedPressureScore + IntermittentCatheterizationScore + InflammatoryBowelScore + SuctioningScore + FeedingTubeScore +
-		   MalnutritionScore + OstomyScore+FootInfectionScore;
+		   MalnutritionScore + OstomyScore+FootInfectionScore + NTAFeedingScore;
 
 return NTAScore;
 }

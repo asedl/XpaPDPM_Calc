@@ -72,7 +72,7 @@ bool BehavioralSymptomsStep3(bool Comatose, char* C1000, bool ImpairmentCheck)
 {
 	bool BehavioralSymptoms3 = false;
 
-	if ((Comatose) || (0 == strcmp(C1000, "1")) || (ImpairmentCheck))
+	if ((Comatose) || (0 == strcmp(C1000, "3")) || (ImpairmentCheck))
 	{
 	BehavioralSymptoms3 = true;
 	}
@@ -105,11 +105,13 @@ char BehavioralSymptomsStep6(int RestorativeNursingScore, int NursingFunctionSco
 			{
 					if ((RestorativeNursingScore <= 1) && (RestorativeNursingScore >= 0))
 					{
-					strcpy( ClinicallyComplexCaseMix, "BAB2" ); HIPPSCode3 = 'S';
+					strcpy( ClinicallyComplexCaseMix, "BAB1" ); HIPPSCode3 = 'S';
+					printf("The Nursing Case Mix Group Is %s\n",ClinicallyComplexCaseMix);
 					}
 					else if (RestorativeNursingScore >= 2)
 					{
-					strcpy( ClinicallyComplexCaseMix, "BAB1" ); HIPPSCode3 = 'R';
+					strcpy( ClinicallyComplexCaseMix, "BAB2" ); HIPPSCode3 = 'R';
+					printf("The Nursing Case Mix Group Is %s\n",ClinicallyComplexCaseMix);
 					}
 			}	
 				

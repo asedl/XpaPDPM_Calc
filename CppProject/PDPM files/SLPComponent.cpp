@@ -108,18 +108,18 @@ int DetermineCognitiveLevel(char* C0500, char* B0100, char* GG0130A1, char* GG01
 	int BIMSScore=0;
 	int CognitiveValue=0;
 
-	if ( 0 == strcmp( C0500, "99" ) ||  0 == strcmp( C0500, "-" ) || 0 == strcmp( C0500, "" ))
+	if  (0 == strcmp( C0500, "99" ) ||  0 == strcmp( C0500, "- " ) ||  0 == strcmp( C0500, " -" )|| 0 == strcmp( C0500, "  " ))
 	{ 
 	
-		if (0 == strcmp (B0100, "1") 
+		if ((0 == strcmp (B0100, "1") 
 		&& (0 == strcmp(GG0130A1, "01") || 0 == strcmp(GG0130A1, "09") || 0 == strcmp(GG0130A1, "88"))
 		&& (0 == strcmp(GG0130C1, "01") || 0 == strcmp(GG0130C1, "09") || 0 == strcmp(GG0130C1, "88"))
 		&& (0 == strcmp(GG0170B1, "01") || 0 == strcmp(GG0170B1, "09") || 0 == strcmp(GG0170B1, "88"))
 		&& (0 == strcmp(GG0170C1, "01") || 0 == strcmp(GG0170C1, "09") || 0 == strcmp(GG0170C1, "88"))
 		&& (0 == strcmp(GG0170D1, "01") || 0 == strcmp(GG0170D1, "09") || 0 == strcmp(GG0170D1, "88"))
 		&& (0 == strcmp(GG0170E1, "01") || 0 == strcmp(GG0170E1, "09") || 0 == strcmp(GG0170E1, "88"))
-		&& (0 == strcmp(GG0170F1, "01") || 0 == strcmp(GG0170F1, "09") || 0 == strcmp(GG0170F1, "88"))
-		&& (0 == strcmp(C1000, "3")))
+		&& (0 == strcmp(GG0170F1, "01") || 0 == strcmp(GG0170F1, "09") || 0 == strcmp(GG0170F1, "88")))
+		|| (0 == strcmp(C1000, "3")))
 		{
 		strcpy( CognitiveLevel, "Severely Impaired" );
 		CognitiveValue = 1;
@@ -144,23 +144,23 @@ int DetermineCognitiveLevel(char* C0500, char* B0100, char* GG0130A1, char* GG01
 			{SevereImpairmentCount=SevereImpairmentCount+1;}
 
 
-			if ((SevereImpairmentCount == 1 || SevereImpairmentCount == 2) && (BasicImpairmentCount == 2 || BasicImpairmentCount == 3))
-			{strcpy( CognitiveLevel, "Moderately Impaired" );
-			CognitiveValue = 1;}
+				if ((SevereImpairmentCount == 1 || SevereImpairmentCount == 2) && (BasicImpairmentCount == 2 || BasicImpairmentCount == 3))
+				{strcpy( CognitiveLevel, "Moderately Impaired" );
+				CognitiveValue = 1;}
 
-			else if ((SevereImpairmentCount == 0 || SevereImpairmentCount == 1 || SevereImpairmentCount == 2) && (BasicImpairmentCount == 1))
-			{strcpy( CognitiveLevel, "Mildly Impaired" );
-			CognitiveValue = 1;}
+				else if ((SevereImpairmentCount == 0 || SevereImpairmentCount == 1 || SevereImpairmentCount == 2) && (BasicImpairmentCount == 1))
+				{strcpy( CognitiveLevel, "Mildly Impaired" );
+				CognitiveValue = 1;}
 
-			else if ((BasicImpairmentCount == 2 || BasicImpairmentCount == 3) && (SevereImpairmentCount == 0))
-			{strcpy( CognitiveLevel, "Mildly Impaired" );
-			CognitiveValue = 1;}
+				else if ((BasicImpairmentCount == 2 || BasicImpairmentCount == 3) && (SevereImpairmentCount == 0))
+				{strcpy( CognitiveLevel, "Mildly Impaired" );
+				CognitiveValue = 1;}
 
-			else if ((BasicImpairmentCount == 0) && (SevereImpairmentCount == 0))
-			{strcpy( CognitiveLevel, "Cognitively Intact" );
-			CognitiveValue = 0;}
+				else if ((BasicImpairmentCount == 0) && (SevereImpairmentCount == 0))
+				{strcpy( CognitiveLevel, "Cognitively Intact" );
+				CognitiveValue = 0;}
 
-			return CognitiveValue;
+				return CognitiveValue;
 		}
 	}
 	else

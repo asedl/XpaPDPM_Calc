@@ -20,6 +20,8 @@
 #include "SpecialCareLow.h"
 #include "NursingComponent.h"
 #include "ConvertToDigit.h"
+#include "tinystr.h"
+#include "tinyxml.h"
 
 #include "userdll.h"
 
@@ -46,10 +48,12 @@ __declspec(dllexport) void* MAGIC_BIND(void)
 	return (&ext_module);
 }
 
-long* pdpm_mdsgrouper(char* p1, char* p2, long* errorcode, char* hipps, long* retval) {
-	*retval = mdsgrouper(p1, p2, (int *) errorcode, hipps);
+long* pdpm_mdsgrouper(char* pdpmRecord, char* HIPPSCode, long* errorcode, char* HIPPSVersionCode, long* retval) {
+	*retval = mdsgrouper(pdpmRecord, HIPPSCode, (int *) errorcode, HIPPSVersionCode);
 	return retval;
 }
+
+
 
 
 
@@ -65,10 +69,6 @@ void FillData( char * Assessment, char * sData, int iLoc, int iLen )
         sData[iLen] = '\0';
 }
 
-
-
-
-
 void Trim_I0020B( char * I0020B )
 {
          char TrimI0020[9];
@@ -77,26 +77,46 @@ void Trim_I0020B( char * I0020B )
          for ( i=0; i<8; i++ )
                if ((I0020B[i] != '^') && (I0020B[i] != '.')  && (I0020B[i] != ' ') )
 			   {
-                   TrimI0020[j++] = I0020B[i] ;
+                   TrimI0020[j++] = I0020B[i];
+			//	   printf("The I0020 Code letter = %c\n",I0020B[i]);
 			   }
          TrimI0020[j] = '\0';
-;
+//		 printf("The I0020 Code is = %s\n",TrimI0020);
 
          strcpy( I0020B, TrimI0020 );
 }
 
-#ifdef SOLARIS	 int mdsgrouper( char* pdpmRecord, char* HIPPSCode,  int* errorcode, char* HIPPSVersionCode )
-#else
-extern "C" __declspec(dllexport) int __stdcall		mdsgrouper( char* pdpmRecord, char* HIPPSCode,  int* errorcode, char* HIPPSVersionCode )
+#ifdef SOLARIS
+
+	 int mdsgrouper( char* pdpmRecord, char* HIPPSCode,  int* errorcode, char* HIPPSVersionCode )
+
+#else
+
+extern "C" __declspec(dllexport) 
+
+
+		int __stdcall mdsgrouper( char* pdpmRecord, char* HIPPSCode,  int* errorcode, char* HIPPSVersionCode )
+
 #endif
 {
 	char* CognitiveLevel; 
 
-	HIPPSCodeGenerated[5] ='\0';
+//	char HIPPSCodeGenerated[6] = {' ',' ',' ',' ',' ','\0'}; 
 
 	strcpy(HIPPSVersionCode, "1.0000");
 	*errorcode = 0;
-	
+	int I8000ACode = 0;
+	int I8000BCode = 0;
+	int I8000CCode = 0;
+	int I8000DCode = 0;
+	int I8000ECode = 0;
+	int I8000FCode = 0;
+	int I8000GCode = 0;
+	int I8000HCode = 0;
+	int I8000ICode = 0;
+	int I8000JCode = 0;
+
+
 	char PrimaryDiagnosisPT[75];
 	int PTClinicalCategory = 0;
 	int ClinicalCategoryNumberCodeOT = 0;
@@ -200,159 +220,187 @@ extern "C" __declspec(dllexport) int __stdcall		mdsgrouper( char* pdpmRecord,
 	int MiscSLPComorbidityScore = 0;
 
 		*errorcode = 0;
+
 		FillData( pdpmRecord, A0310B, 272, 2 );
 		FillData( pdpmRecord, B0100, 511, 1 );
 		FillData( pdpmRecord, B0700, 515, 1 );
 		FillData( pdpmRecord, C0100, 519, 1 );
 		FillData( pdpmRecord, C0500, 527, 2 );
+
 		FillData( pdpmRecord, C0700, 530, 1 );
 		FillData( pdpmRecord, C1000, 537, 1 );
 		FillData( pdpmRecord, D0300, 562, 2 );
 		FillData( pdpmRecord, D0600, 585, 2 );
 		FillData( pdpmRecord, E0100A, 588, 1 );
+		// 10
 		FillData( pdpmRecord, E0100B, 589, 1 );
 		FillData( pdpmRecord, E0200A, 591, 1 );
 		FillData( pdpmRecord, E0200B, 592, 1 );
 		FillData( pdpmRecord, E0200C, 593, 1 );
 		FillData( pdpmRecord, E0800, 601, 1 );
+
 		FillData( pdpmRecord, E0900, 602, 1 );
 		FillData( pdpmRecord, H0100C, 684, 1 );
 		FillData( pdpmRecord, H0100D, 685, 1 );
 		FillData( pdpmRecord, H0200C, 689, 1 );
 		FillData( pdpmRecord, H0500, 692, 1 );
+		// 20
 		FillData( pdpmRecord, I1300, 705, 1 );
 		FillData( pdpmRecord, I1700, 710, 1 );
 		FillData( pdpmRecord, I2000, 711, 1 );
 		FillData( pdpmRecord, I2100, 712, 1 );
 		FillData( pdpmRecord, I2500, 716, 1 );
+
 		FillData( pdpmRecord, I2900, 717, 1 );
 		FillData( pdpmRecord, I4300, 727, 1 );
 		FillData( pdpmRecord, I4400, 728, 1 );
 		FillData( pdpmRecord, I4500, 729, 1 );
 		FillData( pdpmRecord, I4900, 731, 1 );
+		// 30
 		FillData( pdpmRecord, I5100, 733, 1 );
 		FillData( pdpmRecord, I5200, 734, 1 );
 		FillData( pdpmRecord, I5300, 736, 1 );
 		FillData( pdpmRecord, I5500, 739, 1 );
 		FillData( pdpmRecord, I5600, 740, 1 );
+
 		FillData( pdpmRecord, I6200, 747, 1 );
 		FillData( pdpmRecord, I6300, 748, 1 );
 		FillData( pdpmRecord, I8000A, 751, 8 );
 		FillData( pdpmRecord, I8000B, 759, 8 );
 		FillData( pdpmRecord, I8000C, 767, 8 );
+		// 40
 		FillData( pdpmRecord, I8000D, 775, 8 );
 		FillData( pdpmRecord, I8000E, 783, 8 );
 		FillData( pdpmRecord, I8000F, 791, 8 );
 		FillData( pdpmRecord, I8000G, 799, 8 );
 		FillData( pdpmRecord, I8000H, 807, 8 );
+
 		FillData( pdpmRecord, I8000I, 815, 8 );
 		FillData( pdpmRecord, I8000J, 823, 8 );
 		FillData( pdpmRecord, J1100C, 851, 1 );
 		FillData( pdpmRecord, J1550A, 855, 1 );
 		FillData( pdpmRecord, J1550B, 856, 1 );
+		// 50
 		FillData( pdpmRecord, K0100A, 867, 1 );
 		FillData( pdpmRecord, K0100B, 868, 1 );
 		FillData( pdpmRecord, K0100C, 869, 1 );
 		FillData( pdpmRecord, K0100D, 870, 1 );
 		FillData( pdpmRecord, K0300, 877, 1 );
+
 		FillData( pdpmRecord, M0300B1, 900, 1 );
 		FillData( pdpmRecord, M0300C1, 910, 1 );
 		FillData( pdpmRecord, M0300D1, 912, 1 );
 		FillData( pdpmRecord, M0300F1, 916, 1 );
 		FillData( pdpmRecord, M1030, 940, 1 );
+		// 60
 		FillData( pdpmRecord, M1040A, 941, 1 );
 		FillData( pdpmRecord, M1040B, 942, 1 );
 		FillData( pdpmRecord, M1040C, 943, 1 );
 		FillData( pdpmRecord, M1040D, 944, 1 );
 		FillData( pdpmRecord, M1040E, 945, 1 );
+
 		FillData( pdpmRecord, M1040F, 946, 1 );
 		FillData( pdpmRecord, M1200A, 948, 1 );
 		FillData( pdpmRecord, M1200B, 949, 1 );
 		FillData( pdpmRecord, M1200C, 950, 1 );
 		FillData( pdpmRecord, M1200D, 951, 1 );
+		// 70
 		FillData( pdpmRecord, M1200E, 952, 1 );
 		FillData( pdpmRecord, M1200F, 953, 1 );
 		FillData( pdpmRecord, M1200G, 954, 1 );
 		FillData( pdpmRecord, M1200H, 955, 1 );
 		FillData( pdpmRecord, M1200I, 956, 1 );
+
 		FillData( pdpmRecord, N0350A, 959, 1 );
 		FillData( pdpmRecord, N0350B, 960, 1 );
 		FillData( pdpmRecord, O0100A2, 970, 1 );
 		FillData( pdpmRecord, O0100B2, 972, 1 );
 		FillData( pdpmRecord, O0100C2, 974, 1 );
+		// 80
 		FillData( pdpmRecord, O0100D2, 976, 1 );
 		FillData( pdpmRecord, O0100E2, 978, 1 );
 		FillData( pdpmRecord, O0100F2, 980, 1 );
 		FillData( pdpmRecord, O0100H2, 984, 1 );
 		FillData( pdpmRecord, O0100I2, 986, 1 );
+
 		FillData( pdpmRecord, O0100J2, 988, 1 );
 		FillData( pdpmRecord, O0100M2, 993, 1 );
 		FillData( pdpmRecord, O0400D2, 1099, 1 );
 		FillData( pdpmRecord, O0500A, 1110, 1 );
 		FillData( pdpmRecord, O0500B, 1111, 1 );
+		// 90
 		FillData( pdpmRecord, O0500C, 1112, 1 );
 		FillData( pdpmRecord, O0500D, 1113, 1 );
 		FillData( pdpmRecord, O0500E, 1114, 1 );
 		FillData( pdpmRecord, O0500F, 1115, 1 );
 		FillData( pdpmRecord, O0500G, 1116, 1 );
+
 		FillData( pdpmRecord, O0500H, 1117, 1 );
 		FillData( pdpmRecord, O0500I, 1118, 1 );
 		FillData( pdpmRecord, O0500J, 1119, 1 );
 		FillData( pdpmRecord, K0510A1, 1444, 1 );
 		FillData( pdpmRecord, K0510A2, 1445, 1 );
+		// 100
 		FillData( pdpmRecord, K0510B1, 1446, 1 );
 		FillData( pdpmRecord, K0510B2, 1447, 1 );
 		FillData( pdpmRecord, K0510C2, 1449, 1 );
 		FillData( pdpmRecord, K0710A2, 1467, 1 );
 		FillData( pdpmRecord, K0710A3, 1468, 1 );
+
 		FillData( pdpmRecord, K0710B2, 1470, 1 );
 		FillData( pdpmRecord, K0710B3, 1471, 1 );
-
 		FillData( pdpmRecord, GG0130A1, 1498, 2 );
 		FillData( pdpmRecord, GG0130A5, 1704, 2 );
 		FillData( pdpmRecord, GG0130B1, 1504, 2 );
+		// 110
 		FillData( pdpmRecord, GG0130B5, 1706, 2 );
 		FillData( pdpmRecord, GG0130C1, 1510, 2 );
 		FillData( pdpmRecord, GG0130C5, 1708, 2 );
 		FillData( pdpmRecord, GG0170B1, 1516, 2 );
 		FillData( pdpmRecord, GG0170B5, 1710, 2 );
+
 		FillData( pdpmRecord, GG0170C1, 1522, 2 );
 		FillData( pdpmRecord, GG0170C5, 1712, 2 );
 		FillData( pdpmRecord, GG0170D1, 1528, 2 );
 		FillData( pdpmRecord, GG0170D5, 1714, 2 );
 		FillData( pdpmRecord, GG0170E1, 1534, 2 );
+		// 120
 		FillData( pdpmRecord, GG0170E5, 1716, 2 );
 		FillData( pdpmRecord, GG0170F1, 1540, 2 );
 		FillData( pdpmRecord, GG0170F5, 1718, 2 );
 		FillData( pdpmRecord, GG0170I1, 1651, 2 );
 		FillData( pdpmRecord, GG0170I5, 1720, 2 );
+
 		FillData( pdpmRecord, GG0170J1, 1548, 2 );
 		FillData( pdpmRecord, GG0170J5, 1722, 2 );
 		FillData( pdpmRecord, GG0170K1, 1554, 2 );
-		FillData( pdpmRecord, GG0170K5, 1724, 2 );
-
-		
+		FillData( pdpmRecord, GG0170K5, 1724, 2 );		
 		FillData( pdpmRecord, I0020B, 1726, 8 );
+		// 130
 		FillData( pdpmRecord, J2100, 1734, 1 );
 		FillData( pdpmRecord, J2300, 1735, 1 );
 		FillData( pdpmRecord, J2310, 1736, 1 );
 		FillData( pdpmRecord, J2320, 1737, 1 );
 		FillData( pdpmRecord, J2330, 1738, 1 );
+
 		FillData( pdpmRecord, J2400, 1739, 1 );
 		FillData( pdpmRecord, J2410, 1740, 1 );
 		FillData( pdpmRecord, J2420, 1741, 1 );
 		FillData( pdpmRecord, J2500, 1743, 1 );
 		FillData( pdpmRecord, J2510, 1744, 1 );
+		// 140
 		FillData( pdpmRecord, J2520, 1745, 1 );
 		FillData( pdpmRecord, J2530, 1746, 1 );
 		FillData( pdpmRecord, J2600, 1748, 1 );
 		FillData( pdpmRecord, J2610, 1749, 1 );
 		FillData( pdpmRecord, J2620, 1750, 1 );
+
 		FillData( pdpmRecord, J2700, 1752, 1 );
 		FillData( pdpmRecord, J2710, 1753, 1 );
 		FillData( pdpmRecord, J2800, 1755, 1 );
 		FillData( pdpmRecord, J2810, 1756, 1 );
 		FillData( pdpmRecord, J2900, 1758, 1 );
+		// 150
 		FillData( pdpmRecord, J2910, 1759, 1 );
 		FillData( pdpmRecord, J2920, 1760, 1 );
 		FillData( pdpmRecord, J2930, 1761, 1 );
@@ -390,6 +438,9 @@ extern "C" __declspec(dllexport) int __stdcall		mdsgrouper( char* pdpmRecord,
 		
 
 		FoundIndex = DeterminePrimaryDiagnosis(I0020B);
+//		printf("I0020B is: %s\n",I0020B);
+//		printf("The found index is: %i\n",FoundIndex);
+//		printf("The surgery eligiblity code is = %i\n",I0020BEligibility[FoundIndex]);
 		if (AssessmentConvert==1)
 		{
 		EatingFunctionScore = CalcEatingFunctionScorePT(GG0130A1);
@@ -508,6 +559,8 @@ extern "C" __declspec(dllexport) int __stdcall		mdsgrouper( char* pdpmRecord,
 			}
 		   else 
 		   {
+		//	  printf("The found index is: %i\n",FoundIndex);
+			
 		   ClinicalCategoryNumberCodePT = DetermineClinicalCategoryPT(FoundIndex);
 		   }
 
@@ -691,7 +744,7 @@ extern "C" __declspec(dllexport) int __stdcall		mdsgrouper( char* pdpmRecord,
 			HasPulmonary = DeterminePulmonaryDisease(I6200, J1100C);
 			HasFever = DetermineFever(J1550A);
 			HasParenteralFeeding = DetermineParenteralFeeding(K0510A1, K0510A2);
-			HadFeedings = DetermineIfHadFeeding(K0510B1, K0510B2, K0710A3, K0710B3);
+	//		HadFeedings = DetermineIfHadFeeding(K0510B1, K0510B2, K0710A3, K0710B3);
 			HadRespiratoryTherapy = DetermineRespiratory(RespiratoryTherapy);
 			Pneumonia = DeterminePneumonia(I2000);
 			Vomiting = DetermineVomiting(J1550B);
@@ -829,22 +882,61 @@ extern "C" __declspec(dllexport) int __stdcall		mdsgrouper( char* pdpmRecord,
 		}
 		
 
-		NTAScoreI8000A = ReturnNTAScore(I8000A);
-		NTAScoreI8000B = ReturnNTAScore(I8000B);
-		NTAScoreI8000C = ReturnNTAScore(I8000C);
-		NTAScoreI8000D = ReturnNTAScore(I8000D);
-		NTAScoreI8000E = ReturnNTAScore(I8000E);
-		NTAScoreI8000F = ReturnNTAScore(I8000F);
-		NTAScoreI8000G = ReturnNTAScore(I8000G);
-		NTAScoreI8000H = ReturnNTAScore(I8000H);
-		NTAScoreI8000I = ReturnNTAScore(I8000I);
-		NTAScoreI8000J = ReturnNTAScore(I8000J);
+		NTAScoreI8000A = ReturnNTAScore(I8000A, &I8000ACode);
+		NTAScoreI8000B = ReturnNTAScore(I8000B, &I8000BCode);
+		NTAScoreI8000C = ReturnNTAScore(I8000C, &I8000CCode);
+		NTAScoreI8000D = ReturnNTAScore(I8000D, &I8000DCode);
+		NTAScoreI8000E = ReturnNTAScore(I8000E, &I8000ECode);
+		NTAScoreI8000F = ReturnNTAScore(I8000F, &I8000FCode);
+		NTAScoreI8000G = ReturnNTAScore(I8000G, &I8000GCode);
+		NTAScoreI8000H = ReturnNTAScore(I8000H, &I8000HCode);
+		NTAScoreI8000I = ReturnNTAScore(I8000I, &I8000ICode);
+		NTAScoreI8000J = ReturnNTAScore(I8000J, &I8000JCode);
+
+//		printf("I8000A Code = %i\n",I8000ACode);
 	
 
 	
-		I8000Score = NTAScoreI8000A + NTAScoreI8000B + NTAScoreI8000C + NTAScoreI8000D + NTAScoreI8000E +
-					 NTAScoreI8000F + NTAScoreI8000G + NTAScoreI8000H + NTAScoreI8000I + NTAScoreI8000J;
-	
+		I8000Score = I8000Score + NTAScoreI8000A;
+		if (I8000ACode != I8000BCode)
+		{
+		I8000Score = I8000Score + NTAScoreI8000B;
+		}
+		if ((I8000ACode != I8000CCode) && (I8000BCode != I8000CCode))
+		{
+		I8000Score = I8000Score + NTAScoreI8000C;
+		}
+		if ((I8000ACode != I8000DCode) && (I8000BCode != I8000DCode) && (I8000CCode != I8000DCode))
+		{
+		I8000Score = I8000Score + NTAScoreI8000D;
+		}
+		if ((I8000ACode != I8000ECode) && (I8000BCode != I8000ECode) && (I8000CCode != I8000ECode) && (I8000DCode != I8000ECode))
+		{
+		I8000Score = I8000Score + NTAScoreI8000E;
+		}
+		if ((I8000ACode != I8000FCode) && (I8000BCode != I8000FCode) && (I8000CCode != I8000FCode) && (I8000DCode != I8000FCode) && (I8000ECode != I8000FCode))	
+		{
+		I8000Score = I8000Score + NTAScoreI8000F;
+		}
+		if ((I8000ACode != I8000GCode) && (I8000BCode != I8000GCode) && (I8000CCode != I8000GCode) && (I8000DCode != I8000GCode) && (I8000ECode != I8000GCode) && (I8000FCode != I8000GCode))	
+		{
+		I8000Score = I8000Score + NTAScoreI8000G;
+		}
+		if ((I8000ACode != I8000HCode) && (I8000BCode != I8000HCode) && (I8000CCode != I8000HCode) && (I8000DCode != I8000HCode) && (I8000ECode != I8000HCode) && (I8000FCode != I8000HCode) && (I8000GCode != I8000HCode))
+		{
+		I8000Score = I8000Score + NTAScoreI8000H;
+		}
+		if ((I8000ACode != I8000ICode) && (I8000BCode != I8000ICode) && (I8000CCode != I8000ICode) && (I8000DCode != I8000ICode) && (I8000ECode != I8000ICode) && (I8000FCode != I8000ICode) && (I8000GCode != I8000ICode) && (I8000HCode != I8000ICode))	
+		{
+		I8000Score = I8000Score + NTAScoreI8000I;
+		}
+		if ((I8000ACode != I8000JCode) && (I8000BCode != I8000JCode) && (I8000CCode != I8000JCode) && (I8000DCode != I8000JCode) && (I8000ECode != I8000JCode) && (I8000FCode != I8000JCode) && (I8000GCode != I8000JCode) && (I8000HCode != I8000JCode) && (I8000ICode != I8000JCode))
+		{
+		I8000Score = I8000Score + NTAScoreI8000J;
+		}
+
+	//	printf("The NTA I8000 Score is = %i\n",I8000Score);
+
 		IntraVenousMedicationScore = DetermineIntravenousMedication(O0100H2);
 		VentilatorScore = DetermineVentilator(O0100F2);
 		TransfusionScore = DetermineTransfusion(O0100I2);
@@ -900,3 +992,64 @@ extern "C" __declspec(dllexport) int __stdcall		mdsgrouper( char* pdpmRecord,
 	
 
 }
+/*
+#ifdef SOLARIS
+   int mdsgrouper_XML( char* sXMLRecord, char* HIPPSCode,  int* errorcode, char* HIPPSVersionCode )
+ #else
+ extern "C" __declspec(dllexport) int __stdcall
+	mdsgrouper_XML_FILE( char* sXMLFile, char* HIPPSCode,  int* errorcode, char* HIPPSVersionCode ) 
+#endif
+{
+	char pdpmXMLRecord[3691];
+    memset(pdpmXMLRecord, ' ', 3691);
+	pdpmXMLRecord[3689] = '%';
+	pdpmXMLRecord[3690] = '\0';
+
+	TiXmlDocument doc( sXMLFile );
+	bool loadOkay = doc.LoadFile();
+
+	if ( !loadOkay )
+		{
+			printf( "Could not load xml file %s. Error=%s. Exiting.\n", sXMLFile, doc.ErrorDesc() );
+            return 99;
+		}
+
+		TiXmlNode* node = 0;
+		TiXmlElement* pdpmElement = 0;
+		TiXmlElement* itemElement = 0;
+		TiXmlElement*	element;
+
+		node = doc.FirstChild( "ASSESSMENT" );
+		assert( node );
+		pdpmElement = node->ToElement();
+		assert( pdpmElement  );
+
+		node = doc.RootElement();
+		assert( node );
+		// Walk all the elements in a node.
+		char name[9];
+		char itemValue[9];
+		int itemCount = 0;
+
+		for( element = pdpmElement->FirstChildElement();
+			 element;
+			 element = element->NextSiblingElement() )
+		{
+             strcpy( name,element->Value() );
+			 for ( int i=0; i<154; i++ ) {
+			     if ( 0==strcmp(name, items[i].name) ) {
+                      strcpy(itemValue, element->GetText());
+					  FillRecord( pdpmXMLRecord, itemValue, items[i].loc, strlen(itemValue) );
+                      itemCount++;
+					  break;
+				      }
+			}
+
+		}
+
+	int errorCode = mdsgrouper( pdpmXMLRecord, HIPPSCode,  errorcode, HIPPSVersionCode  );
+
+    return errorCode;
+}
+
+*/

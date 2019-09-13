@@ -10,7 +10,7 @@
 int DeterminePrimaryDiagnosis(char* I0020B)
 {int FoundIndex=0;
 
-for( int index = 0; index < 37213; index++ ) {
+for( int index = 0; index < 37312; index++ ) {
       if(0 == strcmp(I0020B, I0020BCodes[index]))
 	  {
 	  FoundIndex = index;
@@ -28,6 +28,7 @@ RetrievedOrthopedicValue = I0020BEligibility[SurgeryIndex];
  if(I0020BEligibility[SurgeryIndex]== 3)
  {
 	OrthopedicSurgeryEligible = true;
+//	printf("This I0020B is Major Surgery Eligible!!");
  }
 return OrthopedicSurgeryEligible;
 }

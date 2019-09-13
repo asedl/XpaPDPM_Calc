@@ -78,7 +78,7 @@ int DetermineRestorativeNursingCount(char* H0200C, char* H0500, char* O0500A, ch
 							char* O0500J)
 {int RestorativeNursingCount = 0;
 
-	if ((0 == strcmp(H0200C, "6")) || (0 == strcmp(H0200C, "7")) || (0 == strcmp(H0500, "6")) || (0 == strcmp(H0500, "7")))
+	if ((0 == strcmp(H0200C, "1")) || (0 == strcmp(H0500, "1")))
 	{
 	 RestorativeNursingCount = RestorativeNursingCount + 1;
 	}
